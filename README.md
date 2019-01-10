@@ -1,6 +1,6 @@
 # Docker set up for TAO
 
-Ready to use docker set up for working with [package-tao](https://github.com/oat-sa/package-tao).
+Ready to use docker set up for working with [package-tao](https://github.com/oat-sa/package-tao) (or deploy-test-package version as well).
 - Php-fpm 7.1
 - Nginx
 - MariaDB
@@ -43,10 +43,9 @@ docker exec -it <FPM-CONTAINER-ID> php tao/scripts/taoInstall.php \
 
 This stack also permit to run integration / functional tests of TAO.
 
-For this , you need to set up TAO config as follow:
+For this , you need to set up TAO config as follow in `package-tao/config/generis.conf.php`:
 
 ```
-# package-tao/config/generis.conf.php
 ...
 # paths
 define('ROOT_PATH','/var/www/html/');
