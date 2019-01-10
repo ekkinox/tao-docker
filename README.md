@@ -4,12 +4,14 @@ Ready to use docker set up for working with [package-tao](https://github.com/oat
 - Php-fpm 7.1
 - Nginx
 - MariaDB
+- Blackfire
 
 ## Set up
 
 In your `package-tao` installation root folder, copy provided:
 - docker folder
 - docker-compose.yml file
+- .env file (for blackfire credentials)
 
 
 ## Usage
@@ -58,6 +60,8 @@ And then run tests:
 docker exec -it <FPM-CONTAINER-ID> vendor/bin/phpunit anyTest
 ```
 
+## Blackfire usage
 
+If you need to use blackfire, you can simply edit the `.env` file settings with your blackfire credentials.
 
 

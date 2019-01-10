@@ -38,6 +38,16 @@ services:
     volumes:
       - tao_mariadb_data:/var/lib/mysql:cached
 
+  tao_blackfire:
+    image: blackfire/blackfire
+    networks:
+      - tao_network
+    ports:
+      - "8707:8707"
+    environment:
+      - BLACKFIRE_SERVER_ID
+      - BLACKFIRE_SERVER_TOKEN
+
 volumes:
   tao_mariadb_data:
     driver: local
