@@ -24,6 +24,7 @@ RUN docker-php-ext-install pdo && \
     docker-php-ext-install zip && \
     docker-php-ext-install calendar && \
     docker-php-ext-install sockets && \
+    docker-php-ext-install pcntl && \
     docker-php-ext-enable igbinary && \
     docker-php-ext-enable redis
 
