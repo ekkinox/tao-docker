@@ -28,7 +28,7 @@ You can then access:
 
 Extra: If needed, this is the CLI needed to install TAO using this docker stack:
 ```
-docker exec -it <FPM-CONTAINER-ID> php tao/scripts/taoInstall.php \
+docker exec -it tao_phpfpm php tao/scripts/taoInstall.php \
     --db_driver pdo_mysql \
     --db_host tao_mariadb \
     --db_name tao \
@@ -57,11 +57,10 @@ define('ROOT_URL','http://tao_nginx/');
 
 And then run tests:
 ```
-docker exec -it <FPM-CONTAINER-ID> vendor/bin/phpunit anyTest
+docker exec -it tao_phpfpm vendor/bin/phpunit anyTest
 ```
 
 ## Blackfire usage
 
 If you need to use blackfire, you can simply edit the `.env` file settings with your blackfire credentials.
-
 

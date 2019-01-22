@@ -2,6 +2,7 @@ version: '2'
 
 services:
   tao_nginx:
+    container_name: tao_nginx
     image: nginx:stable
     networks:
       - tao_network
@@ -14,6 +15,7 @@ services:
     working_dir: /etc/nginx/conf.d
 
   tao_phpfpm:
+    container_name: tao_phpfpm
     build:
       context: ./docker/phpfpm
     expose:
@@ -25,6 +27,7 @@ services:
     working_dir: /var/www/html
 
   tao_mariadb:
+    container_name: tao_mariadb
     image: mariadb:latest
     networks:
       - tao_network
